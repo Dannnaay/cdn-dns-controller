@@ -11,8 +11,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git credentials: ${repositoryCredentials}
-                    url: ${repository}
+                bat 'git clone https://github.com/Dannnaay/cdn-dns-controller.git'
             }
         }
         stage('tests') {
